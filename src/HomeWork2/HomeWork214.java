@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class HomeWork214 {
     public static void main(String[] args) {
 
-       long a = Long.MAX_VALUE;
-        //while (a <= Long.MAX_VALUE){
-        //    a *= 3;
-        //    System.out.println(a);
-       // }
-        System.out.println(a);
 
-
-
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10 ; j++) {
+                int a = i * j;
+                System.out.print(j + " * " + i + " = " + a + "\t\t");
+            }
+            System.out.println(" ");
+        }
     }
 }
