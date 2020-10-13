@@ -1,6 +1,8 @@
 package HomeWork3;
 
-public class CalculatorWithCounter {
+public class CalculatorWithCounter extends CalculatorWithMathExtends {
+
+    long i = 0l;
 
     CalculatorWithCounter (CalculatorWithOperator calc){
 
@@ -11,6 +13,13 @@ public class CalculatorWithCounter {
     CalculatorWithCounter (CalculatorWithMathExtends calc){
 
     }
+
+    public long getCountOperation(){
+
+        i++;
+        return i;
+    }
+
 }
 
 
