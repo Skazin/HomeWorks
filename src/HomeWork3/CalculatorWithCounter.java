@@ -1,6 +1,6 @@
 package HomeWork3;
 
-public class CalculatorWithCounter extends CalculatorWithMathExtends {
+public class CalculatorWithCounter extends CalculatorWithMathExtends implements ICalculator {
 
     long i = 0l;
 

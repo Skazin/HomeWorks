@@ -1,6 +1,6 @@
 package HomeWork3;
 
-public class CalculatorWithOperator {
+public class CalculatorWithOperator implements ICalculator {
 
     public double plus (double a, double b){
         double c;

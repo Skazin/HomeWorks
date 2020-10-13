@@ -1,6 +1,6 @@
 package HomeWork3;
 
-public class CalculatorWithMathCopy {
+public class CalculatorWithMathCopy implements ICalculator {
 
     public double plus (double a, double b){
 
@@ -30,7 +30,7 @@ public class CalculatorWithMathCopy {
         return c;
     }
 
-    public double degree (double a, double b){
+    public double degree (double a, int b){
 
         return Math.pow(a, b);
     }
