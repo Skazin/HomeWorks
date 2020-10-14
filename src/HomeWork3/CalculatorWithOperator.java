@@ -34,7 +34,7 @@ public class CalculatorWithOperator implements ICalculator {
         return c;
     }
 
-    public double module (double a){
+    public double module (double a){ // a < 0 ? -a : a (оптимальнее)
         double c;
         if (a < 0) c = a * (-1);
         else c = a;
