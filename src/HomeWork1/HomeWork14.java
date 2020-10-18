@@ -4,17 +4,17 @@ public class HomeWork14 {
 
     public static void main(String[] args) {
 
-        sleepIn(true, false);
+       boolean sleep = sleepIn(false, true);
+       if (sleep) System.out.println("Спим дальше");
+       else System.out.println("Пора на работу");
 
     }
 
     public static boolean sleepIn(boolean weekday, boolean vacation) {
 
         if (!weekday || vacation) {
-            System.out.println("Спим дальше");
             return true;}
         else {
-            System.out.println("Пора на работу");
             return false;}
     }
 
