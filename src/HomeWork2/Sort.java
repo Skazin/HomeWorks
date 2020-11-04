@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Sort {
 
 
-    protected static void shake (int[] arr) { // шейкерная сортировка
+     static void shake (int[] arr) { // шейкерная сортировка
 
         System.out.println("Изначальный массив: " + Arrays.toString(arr));
 
@@ -38,7 +38,7 @@ public class Sort {
         System.out.println("Измененный массив : " + Arrays.toString(arr));
     }
 
-    protected static void burbles (int[] arr) { // пузырьковая сортировка
+     static void burbles (int[] arr) { // пузырьковая сортировка
 
         System.out.println("Изначальный массив: " + Arrays.toString(arr));
 

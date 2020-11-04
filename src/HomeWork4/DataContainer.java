@@ -1,10 +1,15 @@
 package HomeWork4;
 
+
 import java.util.*;
 
 public class DataContainer <T> {
 
-    private T[] data = (T[]) new Object[10];
+    private T[] data;
+
+    public DataContainer (T[] data){
+        this.data = data;
+    }
 
     public T[] getItems() {
         return data;
@@ -81,19 +86,6 @@ public class DataContainer <T> {
         return false;
     }
 
-    public void sort (Comparator <T> comparator){
-        for (int out = data.length - 1; out >= 1; out--) {
-
-            for (int in = 0; in < out; in++) {
-
-                if (comparator.compare(data[in], data[in + 1]) > 0) {
-                    T p = data[in];
-                    data[in] = data[in + 1];
-                    data[in + 1] = p;
-                }
-            }
-        }
-    }
 
 
     @Override
@@ -110,5 +102,19 @@ public class DataContainer <T> {
         }
         newString += "\"";
         return newString;
+    }
+
+    public void sort (Comparator <T> comparator){
+        for (int out = data.length - 1; out >= 1; out--) {
+
+            for (int in = 0; in < out; in++) {
+
+                if (comparator.compare(data[in], data[in + 1]) > 0) {
+                    T p = data[in];
+                    data[in] = data[in + 1];
+                    data[in + 1] = p;
+                }
+            }
+        }
     }
 }
