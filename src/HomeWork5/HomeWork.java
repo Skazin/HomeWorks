@@ -3,6 +3,7 @@ package HomeWork5;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.Callable;
 
 public class HomeWork {
     public static void main(String[] args) {
@@ -27,11 +28,10 @@ public class HomeWork {
         String stringText = fileToString(fileName);
         String stringTextInLowerCase = stringText.toLowerCase();
 
-        System.out.println("Слово \"война\" встречается " + easySearch.search(stringTextInLowerCase, "война") + " раз");
-        System.out.println("Слово \"и\" встречается " + easySearch.search(stringTextInLowerCase, "и") + " раз");
+
+        System.out.println("Слово \"война\" встречается " + easySearch.search(stringTextInLowerCase, "война") + " раза");
+        System.out.println("Слово \"и\" встречается " + easySearch.search(stringTextInLowerCase, "и") + " раза");
         System.out.println("Слово \"мир\" встречается " + easySearch.search(stringTextInLowerCase, "мир") + " раз");
-
-
     }
 
     /**
@@ -42,7 +42,7 @@ public class HomeWork {
     public static String erasePunctuation (String line){
         char[] punctuation = {',', '-', ';', '.', ':', '"', '(', ')', '!', '?'};
         for (char i : punctuation) {
-            line.replace(i, ' ');
+            line = line.replace(i, ' ');
         }
         return line;
     }
@@ -150,5 +150,7 @@ public class HomeWork {
         }catch (IOException e){
             System.out.println("Произошла ошибка ввода/вывода");
         }
-    return stringBuilder.toString();}
+    return stringBuilder.toString();
+    }
 }
+
